@@ -1,4 +1,4 @@
-{
+  {
   "extends": ["tslint:recommended", "tslint-config-prettier"],
   "linterOptions": {
     "exclude": ["config/**/*.js", "node_modules/**/*."]
@@ -9,7 +9,11 @@
     "object-literal-sort-keys": false,
     "ordered-imports": true,
     "interface-name": false,
-    "strict-null-checks": false
+    "strict-null-checks": false,   
   },
+  "compilerOptions": {  
+     "noUnusedLocals": false,
+     "noUnusedParameters": false
+   },
   "rulesDirectory": []
 }
