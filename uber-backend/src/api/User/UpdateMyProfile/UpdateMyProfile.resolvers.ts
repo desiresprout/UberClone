@@ -16,7 +16,7 @@ const resolvers: Resolvers = {
         { req }
       ): Promise<UpdateMyProfileResponse> => {
         const user: User = req.user;
-        const notNull = cleanNullArgs(args);
+        const notNull : any = cleanNullArgs(args);
         try {
           await User.update({ id: user.id }, { ...notNull });
           return {
