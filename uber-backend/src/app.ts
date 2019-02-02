@@ -17,14 +17,18 @@ class App {
     this.app = new GraphQLServer({
       schema,
       context : req=>{
+        const { connection: { context = null } = {} } = req;
+        console.log(context);
         return {
           req : req.request,
-          pubSub: this.pubSub
+          pubSub: this.pubSub,
+          context
         };
       }
     });
     this.middlewares();
   }
+
   private middlewares = (): void => {
     this.app.express.use(cors());
     this.app.express.use(logger("dev"));
