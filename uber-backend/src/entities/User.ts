@@ -6,8 +6,7 @@ import {
   BeforeUpdate,
   Column,
   CreateDateColumn,
-  Entity,
-  
+  Entity,  
   OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn
